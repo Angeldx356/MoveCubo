@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover cubo reto</title>
+    <script src="aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('cubito', {
+            init: function () {
+                //alert("Insertar cubito!");
+                var box = document.createElement('a-box');
+                box.setAttribute('id', 'miCubo');
+                box.setAttribute('position', '-1 0.5 -3');
+                box.setAttribute('rotation', '0 0 0');
+                box.setAttribute('color', '#4C0000');
+                this.el.appendChild(box);
+            }
+        });  
+    </script>
+</head>
+<body>
+    <input id="arri" type="button" value="Arriba">
+    <br>
+    <input id="izq" type="button" value="Izquierda">
+    <input id="der" type="button" value="Derecha">
+    <input type="text" id="contador" value="0">
+    <input type="text2" id="contador2" value="0">
+    <input type="color" id="colorin">
+    <input type="button" id="colorxd" Value="Cambio">
+    <br>
+    <input id="aba" type="button" value="Abajo">
+
+    <script src="index.js"></script> <!-- Script de los botones -->
+
+    <a-scene>
+        <a-entity cubito></a-entity>
+    </a-scene>
+</body>
+</html>
