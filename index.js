@@ -5,6 +5,7 @@ var btnder = document.getElementById('der');
 var btnarr = document.getElementById('arri'); 
 var btnaba = document.getElementById('aba'); 
 var btncolor = document.getElementById('colorxd');
+var colorin = document.getElementById('colorin');
 
 btnizq.addEventListener('click', function () { //Espero un Evento que esta asignado al boton "click"
     count -= .5;
@@ -38,7 +39,7 @@ function actualizarPosicion(x,y) {
 }
 
 function obtenerColor() {
-    var btncolor = document.getElementById("colorin");
     var colorSeleccionado = colorin.value;
+    var cubo = document.getElementById('miCubo');
     cubo.setAttribute('color', colorSeleccionado);
 }
